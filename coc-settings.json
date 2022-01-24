@@ -1,0 +1,16 @@
+{
+  "languageserver": {
+    "go": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "trace.server": "verbose",
+      "filetypes": ["go"]
+    }
+  },
+  "yaml.format.enable": true,
+  "yaml.schemas":{
+	"kubernetes": "k8s.yaml",
+	"https://json.schemastore.org/kustomization.json": ["k8s.yaml"],
+	"https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.1/schema.json": ["swagger.yaml,APIZones.yaml"]
+  }
+}

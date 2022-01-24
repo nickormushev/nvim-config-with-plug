@@ -1,27 +1,36 @@
 call plug#begin()
 Plug 'craigemery/vim-autotag'
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
+Plug 'neovim/nvim-lspconfig'
+
+Plug 'kyazdani42/nvim-tree.lua'
+Plug 'ibhagwan/fzf-lua'
+Plug 'vijaymarupudi/nvim-fzf'
+Plug 'kyazdani42/nvim-web-devicons'
+
+"Plug 'vim-ruby/vim-ruby'
+"Plug 'tpope/vim-rails'
+Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'pangloss/vim-javascript'
 Plug 'rafi/awesome-vim-colorschemes'
-Plug 'junegunn/fzf.vim'
-Plug 'dhruvasagar/vim-table-mode'
+
+"Plug 'dhruvasagar/vim-table-mode'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'takac/vim-hardtime'
+"Plug 'takac/vim-hardtime'
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 Plug 'sjl/badwolf'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 "Plug 'https://github.com/ycm-core/YouCompleteMe.git', { 'do': './install.py --ts-completer --all' }
 Plug 'itchyny/lightline.vim'
 Plug 'honza/vim-snippets'
-"Plug 'SirVer/ultisnips'
+
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'preservim/nerdcommenter'
 Plug 'drewtempelmeyer/palenight.vim'
-Plug 'dense-analysis/ale'
-Plug 'maximbaz/lightline-ale'
+"Plug 'dense-analysis/ale'
+"Plug 'maximbaz/lightline-ale'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
@@ -30,21 +39,31 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'Yggdroot/indentLine'
+"Plug 'Yggdroot/indentLine'
 Plug 'martinda/Jenkinsfile-vim-syntax'
 "Plug 'frazrepo/vim-rainbow'
-Plug 'AndrewRadev/splitjoin.vim'
+"Plug 'AndrewRadev/splitjoin.vim'
 Plug 'fatih/molokai'
 Plug 'simeji/winresizer'
-Plug 'preservim/nerdtree'
+"Plug 'preservim/nerdtree'
 Plug 'mengelbrecht/lightline-bufferline'
-Plug 'ryanoasis/vim-devicons'
+"Plug 'ryanoasis/vim-devicons'
 Plug 'christoomey/vim-system-copy'
 Plug 'mhinz/vim-startify'
+Plug 'terryma/vim-multiple-cursors'
+
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+
+Plug 'SirVer/ultisnips'
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
 call plug#end()
 
-colorscheme dracula
+colorscheme molokai
 set background=dark
 let g:palenight_terminal_italics=1
 
@@ -54,7 +73,7 @@ set rtp+=~/.fzf
 "Scroll offset
 set scrolloff=4
 
-set tabstop=4 shiftwidth=4 "expandtab
+set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
 set number
 set relativenumber
@@ -113,22 +132,25 @@ set colorcolumn=120
 let g:rainbow_active = 1
 
 set cursorcolumn
-nmap <silent> <C-o> :NERDTreeToggle<cr>
+"nmap <silent> <C-o> :NERDTreeToggle<cr>
 
 "enables folds by default. I did not like them so I commented it out
 "set foldmethod=indent
 "set foldcolumn=1
 inoremap jj <ESC>
 
-nnoremap <SPACE> <Nop>
+"nnoremap <SPACE> <Nop>
 "make <leader> space
-let mapleader = ' '
+"let mapleader = ' '
 
 source ~/.config/nvim/plugin-config/ultisnips.vim
 source ~/.config/nvim/plugin-config/fzf.vim
 source ~/.config/nvim/plugin-config/vim-go.vim
-source ~/.config/nvim/plugin-config/indentline.vim
+"source ~/.config/nvim/plugin-config/indentline.vim
 source ~/.config/nvim/plugin-config/ale.vim
 source ~/.config/nvim/plugin-config/lightline.vim
-source ~/.config/nvim/plugin-config/coc.vim
+"source ~/.config/nvim/plugin-config/coc.vim
 source ~/.config/nvim/plugin-config/fugitive.vim
+source ~/.config/nvim/plugin-config/indent_blankline.vim
+source ~/.config/nvim/plugin-config/nvim-tree.vim
+source ~/.config/nvim/plugin-config/lsp.vim

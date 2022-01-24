@@ -25,3 +25,7 @@ nnoremap <leader>dc :GoDebugContinue<CR>
 nnoremap <leader>ds :GoDebugStop<CR>
 nnoremap <leader>dn :GoDebugNext<CR>
 nnoremap <leader>gt :GoTest<CR>
+nnoremap <leader>gr :GoRefferers<CR>
+
+"let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+"let g:go_metalinter_autosave = 1
