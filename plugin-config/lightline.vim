@@ -1,5 +1,5 @@
 let g:lightline = {
-      \'colorscheme': 'dracula',
+      \'colorscheme': 'gruvbox',
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead'
       \ },
