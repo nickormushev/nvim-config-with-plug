@@ -1,4 +1,4 @@
-nnoremap <S-s> :FZF <CR>
-nnoremap <leader><S-b> :Buffers <CR>
-nnoremap <S-l> :BLines <CR>
-nnoremap <S-a> :Ag <CR>
+nnoremap <S-s> :FzfLua files <CR>
+nnoremap <leader><S-b> :FzfLua buffers <CR>
+nnoremap <S-l> :FzfLua blines <CR>
+nnoremap <S-a> :FzfLua grep <CR>
